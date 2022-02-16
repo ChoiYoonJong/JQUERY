@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        function addFile(){
+            ($("input:file").first()).clone(true).insertAfter(($("input:file").first()));
+        }
+
+        function delFile(){
+            ($("input:file").last()).remove();
+        }   
+    </script>
+</head>
+<body>
+    <div>
+        <input type="file">
+        <input type="button" value="추가" onclick="addFile()">
+        <input type="button" value="삭제" onclick="delFile()">
+    </div>
+</body>
+</html>
